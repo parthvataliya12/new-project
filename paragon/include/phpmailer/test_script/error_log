@@ -1,0 +1,8 @@
+[07-Jun-2018 02:18:09 Etc/GMT] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/parsanai/public_html/paragontwowheeleraccessories.com/include/phpmailer/test_script/index.php on line 109
+[07-Jun-2018 02:27:35 Etc/GMT] PHP Deprecated:  Assigning the return value of new by reference is deprecated in /home/parsanai/public_html/paragontwowheeleraccessories.com/include/phpmailer/test_script/index.php on line 109
+[08-Jun-2018 03:32:27 Etc/GMT] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[08-Jun-2018 03:32:27 Etc/GMT] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[08-Jun-2018 03:32:27 Etc/GMT] PHP Fatal error:  Unknown: Failed opening required '/home/parsanai/public_html/paragontwowheeleraccessories.com/include/phpmailer/test_script/index.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in Unknown on line 0
+[09-Jun-2018 03:09:39 Etc/GMT] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[09-Jun-2018 03:09:39 Etc/GMT] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[09-Jun-2018 03:09:39 Etc/GMT] PHP Fatal error:  Unknown: Failed opening required '/home/parsanai/public_html/paragontwowheeleraccessories.com/include/phpmailer/test_script/index.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in Unknown on line 0

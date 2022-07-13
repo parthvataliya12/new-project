@@ -1,0 +1,190 @@
+﻿/*!
+ * JiS is “Images slider for jQuery framework”.
+ *
+ * @author demorfi <demorfi@gmail.com>
+ * @version 1.0
+ * @source https://github.com/demorfi/jis
+ * @license http://opensource.org/licenses/MIT Licensed under MIT License
+ */
+
+body{ margin:0;}
+
+.jis-wrapper {
+	width:100% !important;
+	overflow:hidden;
+	position:relative;
+	z-index:0;
+	padding:0;
+	background:#fff;
+}
+.jis-wrapper img {
+	border:0; width:100%; max-width:100%; display:block; max-height:500px !important;
+}
+.jis-wrapper ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100% !important;
+	overflow:hidden;
+	outline:1px solid rgba(0,0,0,0.15);
+	position:relative;
+	z-index:1;
+	
+}
+.jis-wrapper ul li {
+	float:left;
+	position:relative;
+	z-index:1;
+	display:none;
+	width:100%;
+	height:100%
+}
+.jis-wrapper ul li a {
+	position:relative;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:2
+}
+.jis-wrapper ul li .jis-title {
+	position:relative;
+	z-index:3;
+	height:40px;
+	bottom:40px;
+	line-height:40px;
+	padding:0 15px;
+	color:#fff;
+	text-shadow:0 1px #000;
+	background:rgba(0,0,0,0.6);
+	overflow:hidden;
+	display:none
+}
+.jis-wrapper ul li.jis-selected {
+	display:block !important;
+}
+.jis-wrapper ul li.jis-selected .jis-title {
+	display:block
+}
+.jis-wrapper ul.jis-loading {
+	background:0
+}
+.jis-wrapper.jis-slide-first:not(.jis-slide-recursion) .jis-direction-prev, .jis-wrapper .jis-control .jis-control-list a, .jis-wrapper .jis-direction .jis-direction-prev, .jis-wrapper .jis-direction .jis-direction-next {
+	
+}
+
+.jis-wrapper .jis-direction{position: absolute;	z-index:100; width:100%; top:60%; right:0px;}
+.jis-wrapper .jis-direction .jis-direction-prev, .jis-wrapper .jis-direction .jis-direction-next {
+	position:absolute;
+	height:50px;
+	width:50px;
+	bottom:0px;
+	left:0;
+	display:block;
+	cursor:pointer;
+	margin-top:0px;
+	z-index:3;
+	cursor:pointer;
+	text-indent:-9999px;
+	background-position:0 0;
+	-moz-transition:width .4s ease, left .4s ease;
+	-o-transition:width .4s ease, left .4s ease;
+	-webkit-transition:width .4s ease, left .4s ease;
+	transition:width .4s ease, left .4s ease;
+	opacity:0.5;
+	background:url(../images/arrow-left.png) no-repeat center #000;
+}
+.jis-wrapper .jis-direction .jis-direction-prev:hover{ opacity:1;}
+.jis-wrapper .jis-direction .jis-direction-prev:hover, .jis-wrapper .jis-direction .jis-direction-prev:focus, .jis-wrapper .jis-direction .jis-direction-next:hover, .jis-wrapper .jis-direction .jis-direction-next:focus {
+	right:0px;
+	background:url(../images/arrow-left.png) no-repeat center #F00;
+	opacity:1;
+	-moz-transition: .4s ease, left .4s ease;
+	-o-transition: .4s ease, left .4s ease;
+	-webkit-transition: .4s ease, left .4s ease;
+	transition: .4s ease, left .4s ease;
+}
+
+.jis-wrapper .jis-direction .jis-direction-next {	
+	position:absolute;
+	height:50px;
+	width:50px;
+	bottom:0px;
+	right:0px;
+	left:auto;
+	display:block;
+	cursor:pointer;
+	margin-top:0px;
+	z-index:3;
+	cursor:pointer;
+	text-indent:-9999px;
+	background-position:0 0;
+	-moz-transition:width .4s ease, left .4s ease;
+	-o-transition:width .4s ease, left .4s ease;
+	-webkit-transition:width .4s ease, left .4s ease;
+	transition:width .4s ease, left .4s ease;
+	opacity:0.5;
+	background:url(../images/arrow-right.png) no-repeat center #000;
+}
+
+.jis-wrapper .jis-direction .jis-direction-next:hover, .jis-wrapper .jis-direction .jis-direction-next:focus {
+	right:0;
+	background:url(../images/arrow-right.png) no-repeat center #F00;	
+}
+.jis-wrapper .jis-control {
+	position: absolute;
+	z-index:3;
+	width:100%;
+	bottom:20px;
+	right:0px;
+}
+.jis-wrapper .jis-control .jis-control-list {
+	display:table;
+	margin:0 auto;
+	padding:0px 15px
+}
+.jis-wrapper .jis-control .jis-control-list a {
+	display:inline-block;
+	border-radius:6px;
+	width:10px;
+	height:10px;
+	cursor:pointer;
+	text-decoration:none;
+	margin:0 5px;
+	background:#505050;
+	text-indent:-9999px;
+	background-position:0 -94px;
+	-moz-transition:background .4s ease;
+	-o-transition:background .4s ease;
+	-webkit-transition:background .4s ease;
+	transition:background .4s ease;
+}
+.jis-wrapper .jis-control .jis-control-list a:hover, .jis-wrapper .jis-control .jis-control-list a.jis-selected {
+	background-position:0 -84px;
+	background:#fff;
+}
+.jis-wrapper.jis-slide-last:not(.jis-slide-recursion) .jis-direction-next, .jis-wrapper.jis-slide-first:not(.jis-slide-recursion) .jis-direction-prev {
+	opacity:.5;
+	cursor:default;
+	right:-30px;
+	left:auto;
+	width:30px;
+	background-position:-24px -42px
+}
+.jis-wrapper.jis-slide-first:not(.jis-slide-recursion) .jis-direction-prev {
+	left:-30px;
+	background-position:0 0
+}
+
+@media screen and (max-width: 1023px) {
+.jis-wrapper .jis-control {top: auto; bottom:5px;}
+}
+
+@media screen and (max-width: 767px) {
+.jis-wrapper .jis-control {top: auto; bottom:0px;}
+
+.jis-wrapper .jis-direction .jis-direction-next, .jis-wrapper .jis-direction .jis-direction-prev{ width:30px; height:30px;}
+
+.jis-wrapper .jis-direction{ display:none;}
+	
+}

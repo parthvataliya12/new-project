@@ -1,0 +1,61 @@
+Options -MultiViews	
+Options +FollowSymlinks
+
+RewriteEngine On
+RewriteBase /paragon/
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^(.*)/include/(.*)$ include/$2 [L]
+RewriteRule ^(.*)/js/(.*)$ js/$2 [L]
+RewriteRule ^(.*)/css/(.*)$ css/$2 [L]
+RewriteRule ^(.*)/images/(.*)$ images/$2 [L]
+RewriteRule ^(.*)/img/(.*)$ img/$2 [L]
+RewriteRule ^(.*)/logo_images/(.*)$ logo_images/$2 [L]
+RewriteRule ^(.*)/mailtemplate_image/(.*)$ mailtemplate_image/$2 [L]
+RewriteRule ^(.*)/portfolio_image/(.*)$ portfolio_image/$2 [L]
+RewriteRule ^(.*)/slider_image/(.*)$ slider_image/$2 [L]
+RewriteRule ^(.*)/fonts/(.*)$ fonts/$2 [L]
+RewriteRule ^(.*)/fonts2/(.*)$ fonts2/$2 [L]
+RewriteRule ^(.*)/webfonts/(.*)$ webfonts/$2 [L]
+RewriteRule ^(.*)/client-logo-js/(.*)$ client-logo-js/$2 [L]
+RewriteRule ^(.*)/assets/(.*)$ assets/$2 [L]
+RewriteRule ^(.*)/user_files/(.*)$ user_files/$2 [L]
+RewriteRule ^(.*)/scripts/(.*)$ scripts/$2 [L]
+
+RewriteRule ^brands/([^/\.]+)/?$ brands-company.php?pid=$1 [L,QSA]
+#RewriteRule ^brands/([^/\.]+)/?$ brands_details.php?pid=$1 [L,QSA]
+#RewriteRule ^model/([^/\.]+)/?$ models_details.php?pid=$1 [L,QSA]
+RewriteRule ^model/([^/\.]+)/?$ brands_details_new.php?pid=$1 [L,QSA]
+RewriteRule ^product/([^/\.]+)/?$ products_details.php?pid=$1 [L,QSA]
+
+RewriteRule ^index/$ index.php [ne]
+RewriteRule ^thank-you/$ thank-you.php [ne]
+RewriteRule ^error/$ error.php [ne]
+RewriteRule ^about-us/$ about-us.php [ne]
+RewriteRule ^brands/([^/]*)$ brands-new.php [ne]
+RewriteRule ^login/([^/]*)$ login.php [ne]
+RewriteRule ^forgot-password/$ forgot.php [ne]
+RewriteRule ^products/$ products.php [ne]
+RewriteRule ^contact-us/$ contact-us.php [ne]
+RewriteRule ^register/$ register.php [ne]
+RewriteRule ^faq/$ faq.php [ne]
+RewriteRule ^checkout/$ checkout.php [ne]
+RewriteRule ^data/$ ajax.inc.php [ne]
+RewriteRule ^cart/$ cart.php  [ne]
+RewriteRule ^logout/$ logout.php [ne]
+RewriteRule ^profile/$ profile.php [ne]
+RewriteRule ^terms-condition/$ terms.php [ne]
+RewriteRule ^order-history/$ order-history.php [ne]
+RewriteRule ^search/$ search.php [ne]
+RewriteRule ^shipping-delivery/$ shipping-delivery.php [ne]
+RewriteRule ^payments/$ payments.php [ne]
+
+
+
+# /page/anything -> page.php?url=anything
+RewriteRule ^login/([^/]*)$ /login.php?msg=$1 [L]
+RewriteRule ^login/([^/]*)/$ /login.php?msg=$1 [L]
+
+
+#RewriteRule ^(en|es)/(.*)$  $2?lang=$1 [L,QSA]

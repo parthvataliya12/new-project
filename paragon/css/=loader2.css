@@ -1,0 +1,133 @@
+.preloader-wrap{width: 100%; height: 100%; position: fixed; top: 0; bottom: 0; background: rgba(0,0,0,1); z-index : 2000;}
+.percentage {z-index: 100; text-align:center; color: #fff;}
+.loader,
+.percentage{height: 1px; width:100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin : auto;}
+.loader:after,
+.percentage:after {content: ""; display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.loadbar { width: 0%; height: 100%; background:#fff; /* Stripes Background Gradient */   position: absolute; top: 0; left: 0; animation: flicker 5s infinite; overflow: hidden;}
+
+@keyframes animation {
+  10% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 0.86;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.75;
+  }
+}
+
+.wrap { width: 100%; height: 100%; position: relative;  z-index : 1;}
+
+#loader{ display:none; width:100%; height:100%; position:fixed; top:0; left:0;}
+
+.animated {
+			background:#000;
+            height:600px;
+            margin-bottom:0px;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+			width:100%;
+			top:0;
+			position:absolute;
+			display: none;		
+         }
+         
+         @-webkit-keyframes bounceInDown {
+            0% {
+              
+               -webkit-transform: translateY(0);
+            }
+            60% {
+              
+               -webkit-transform: translateY(0px);
+            }
+            80% {
+               -webkit-transform: translateY(0px);
+            }
+            100% { 
+               -webkit-transform: translateY(-100%);
+            }
+         }
+         
+         @keyframes bounceInDown {
+            0% {
+               
+               transform: translateY(0);
+            }
+            60% {
+               
+               transform: translateY(0px);
+            }
+            80% {
+               transform: translateY(0px);
+            }
+            100% {
+               transform: translateY(-100%);
+            }
+         }
+         
+         .bounceInDown {
+            -webkit-animation-name: bounceInDown;
+            animation-name: bounceInDown;
+         }
+
+		 
+ .animated2 {
+			background:#000;
+			height:600px;
+            margin-bottom:0px;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+			width:100%;
+			bottom:0;
+			position:absolute;
+			opacity:0;
+			display:none;
+			         }
+         
+         @-webkit-keyframes bounceInDown2 {
+            0% {
+               -webkit-transform: translateY(0);
+            }
+            60% {
+               -webkit-transform: translateY(0px);
+            }
+            80% {
+               -webkit-transform: translateY(0px);
+            }
+            100% { 
+               -webkit-transform: translateY(100%);
+			   visibility:hidden;
+			  
+            }
+         }
+         
+         @keyframes bounceInDown2 {
+            0% {
+               transform: translateY(0);
+            }
+            60% {
+               transform: translateY(0px);
+            }
+            80% {
+               transform: translateY(0px);
+            }
+            100% {
+               transform: translateY(100%);
+			   visibility:hidden;
+            }
+         }
+         
+         .bounceInDown2 {
+            -webkit-animation-name: bounceInDown2;
+            animation-name: bounceInDown2;
+         }
